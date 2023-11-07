@@ -33,8 +33,8 @@ const server = new ApolloServer({
     resolvers
 });
 
-const {url} = startStandaloneServer(server, {
+const {url} = await startStandaloneServer(server, {
     listen: {port: 4000}
 });
 
-console.log(`Server on port : `, 4000);
+console.log(`Server on port : ${url} `);
